@@ -1,0 +1,17 @@
+name: Introducción a GitHub Actions
+
+on:
+  push:
+    branches:
+      - "**"
+  workflow_dispatch:
+
+jobs:
+  laboratorio-intro:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Mensaje de laboratorio
+        run: echo "✅ Laboratorio de introducción a GitHub Actions configurado"
